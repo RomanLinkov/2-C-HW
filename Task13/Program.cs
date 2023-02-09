@@ -3,18 +3,20 @@ using System;
 
 Clear();
 Console.WriteLine("Здравствуйте!");
-Console.WriteLine("Введте трёхзначное натуральное число:");
-int N = Convert.ToInt32(ReadLine());
+Console.WriteLine("Введите натуральное число:");
+string N = ReadLine();
 
-int a1=N%10;
-int k=N/100;
+int length=N.Length;
+Write("количество цифр введённого числа ");
+WriteLine(length);
 
-if (k<1)
+int a1=0;
+if (length<3)
 {
     WriteLine("третьей цифры нет");
 }
 else 
 {
     Write("третьея цифра ");
-    WriteLine(a1);
+    WriteLine(N[2]);
 } 
